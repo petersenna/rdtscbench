@@ -1,4 +1,6 @@
-rdtscbench measures operations in clock cycles using RDTSC x86 instruction
+rdtscbench measures small and large operations using clock cycles as 
+time measurement unit. It uses RDTSC x86 instruction to get clock i
+cycles from CPU registers
 
 rdtscbench is free software licensed under the GPL v2.
 
