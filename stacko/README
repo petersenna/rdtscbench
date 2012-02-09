@@ -1,0 +1,12 @@
+To compile:
+
+$ mv Makefile.noptimize Makefile
+
+OR
+
+$ mv Makefile.noptimize Makefile
+
+AND
+
+$ make
+
