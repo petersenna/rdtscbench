@@ -1,6 +1,6 @@
 NAME = matrix
 SRCDIR = ../rdtscbench
-CFLAGS = -lrt -lm -O1
+CFLAGS = -lrt -lm 
 OBJ = $(SRCDIR)/rdtscbench.o $(NAME).o
 
 
