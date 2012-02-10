@@ -20,7 +20,7 @@ The Makefile runs gethz.sh to cat /proc/cpuinfo looking for the CPU speed.
 
 folders:
 
-rdtscbench 	- The source code of rdtscbench
+buf		- C code optimization tests
 
 getpid		- Very simple example of how to use rdtscbench
 
@@ -30,3 +30,7 @@ moreExamples	- Measuring: gettimeofday(), simplemath[], sysconf(),
 			malloc ( 1000000 * sizeof ( char ) ),
 			malloc ( 1000000000 * sizeof ( char ) ),
 			Process Communication over pipes;
+
+rdtscbench 	- The source code of rdtscbench
+
+stacko		- C code optimization tests
