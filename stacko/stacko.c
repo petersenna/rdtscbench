@@ -88,11 +88,12 @@ void inline STACKO ( struct timespec *ts, struct timespec *te ){
 
 	rdtscb_getticks ( te ); /* end measurement */
 
-
+/*
 	printf("\n");
 	for (i = 0; i < MAX; ++i)
 		printf("%d", s[i]);
 	printf("\n");
+*/
 }
 
 void inline STACKO1 ( struct timespec *ts, struct timespec *te ){
@@ -193,12 +194,12 @@ void inline STACKOmoonshadow ( struct timespec *ts, struct timespec *te ){
 
         rdtscb_getticks ( te ); /* end measurement */
 
-
+/*
 	printf("\n");
 	for (i = 0; i < MAX; ++i)
 		printf("%d", s[i]);
 	printf("\n");
-
+*/
 }
 
 void inline STACKOmoonshadow2 ( struct timespec *ts, struct timespec *te ){
@@ -234,12 +235,12 @@ void inline STACKOmoonshadow2 ( struct timespec *ts, struct timespec *te ){
 
         rdtscb_getticks ( te ); /* end measurement */
 
-
+/*
 	printf("\n");
 	for (i = 0; i < MAX; ++i)
 		printf("%d", s[i]);
 	printf("\n");
-
+*/
 }
 
 void inline STACKOChristoffer ( struct timespec *ts, struct timespec *te ){
