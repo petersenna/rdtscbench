@@ -1,6 +1,6 @@
 NAME = buf
 SRCDIR = ../rdtscbench
-CFLAGS = -lrt -lm
+CFLAGS = -lrt -lm -O2
 OBJ = $(SRCDIR)/rdtscbench.o $(NAME).o
 
 

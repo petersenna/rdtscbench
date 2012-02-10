@@ -1,4 +1,4 @@
-CFLAGS = -lrt -lm
+CFLAGS = -lrt -lm -O2
 
 all: gethz rdtscbench.o
 
