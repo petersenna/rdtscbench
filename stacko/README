@@ -1,3 +1,5 @@
+http://stackoverflow.com/questions/4305553/optimization-tips
+
 To compile:
 
 $ mv Makefile.noptimize Makefile
