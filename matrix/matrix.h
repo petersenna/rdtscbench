@@ -20,14 +20,13 @@
 #include <memory.h> /* MATRIX7 and MATRIX8 memset() */
 
 /* Functions used to benchmark some code */
-void inline MATRIX1	( struct timespec *ts, struct timespec *te );
-void inline MATRIX2	( struct timespec *ts, struct timespec *te );
-void inline MATRIX3	( struct timespec *ts, struct timespec *te );
-void inline MATRIX4	( struct timespec *ts, struct timespec *te );
-void inline MATRIX5	( struct timespec *ts, struct timespec *te );
-void inline MATRIX6	( struct timespec *ts, struct timespec *te );
+void MATRIX1	( struct timespec *ts, struct timespec *te );
+void MATRIX2	( struct timespec *ts, struct timespec *te );
+void MATRIX3	( struct timespec *ts, struct timespec *te );
+void MATRIX4	( struct timespec *ts, struct timespec *te );
+void MATRIX5	( struct timespec *ts, struct timespec *te );
+void MATRIX6	( struct timespec *ts, struct timespec *te );
 
 void initmatrix();	/* used by MATRIX7() */
-void inline MATRIX7	( struct timespec *ts, struct timespec *te );
-
-void inline MATRIX8	( struct timespec *ts, struct timespec *te );
+void MATRIX7	( struct timespec *ts, struct timespec *te );
+void MATRIX8	( struct timespec *ts, struct timespec *te );

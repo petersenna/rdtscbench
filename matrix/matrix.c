@@ -24,15 +24,6 @@
 int matrix[X_SIZE][Y_SIZE];
 int matrix_a[X_SIZE][Y_ALIGNED];
 
-void MATRIX1 (struct timespec *ts, struct timespec *te);
-void MATRIX2 (struct timespec *ts, struct timespec *te);
-void MATRIX3 (struct timespec *ts, struct timespec *te);
-void MATRIX4 (struct timespec *ts, struct timespec *te);
-void MATRIX5 (struct timespec *ts, struct timespec *te);
-void MATRIX6 (struct timespec *ts, struct timespec *te);
-void MATRIX7 (struct timespec *ts, struct timespec *te);
-void MATRIX8 (struct timespec *ts, struct timespec *te);
-
 int main (int argc, char *argv[]){
 	struct timespec begin, end;
 	int accrepeats, repeats, detailed = 0;
