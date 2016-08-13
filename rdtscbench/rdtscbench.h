@@ -22,6 +22,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include <time.h>
 
 /*
@@ -41,14 +42,14 @@
  *	to be measured. See GETPID() example.
  *
  */
-void inline rdtscb_measure (char msg[32], int repeats, int detailed, \
+void rdtscb_measure (char msg[32], int repeats, int detailed, \
 	void (*function)( struct timespec *ts, struct timespec *te ) );
 
 /*
  * rdtscb_getticks(struct timespec *ts)
  * saves the result of RDTSC instruction at *ts
  */
-__inline__ void rdtscb_getticks(struct timespec *ts);
+void rdtscb_getticks(struct timespec *ts);
 
 /*
  * accuracy(int repeats, int detailed);

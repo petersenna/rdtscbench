@@ -20,9 +20,18 @@
 
 #define X_SIZE	60
 #define Y_SIZE	30
-
-
+#define Y_ALIGNED 32
 int matrix[X_SIZE][Y_SIZE];
+int matrix_a[X_SIZE][Y_ALIGNED];
+
+void MATRIX1 (struct timespec *ts, struct timespec *te);
+void MATRIX2 (struct timespec *ts, struct timespec *te);
+void MATRIX3 (struct timespec *ts, struct timespec *te);
+void MATRIX4 (struct timespec *ts, struct timespec *te);
+void MATRIX5 (struct timespec *ts, struct timespec *te);
+void MATRIX6 (struct timespec *ts, struct timespec *te);
+void MATRIX7 (struct timespec *ts, struct timespec *te);
+void MATRIX8 (struct timespec *ts, struct timespec *te);
 
 int main (int argc, char *argv[]){
 	struct timespec begin, end;
@@ -71,9 +80,6 @@ int main (int argc, char *argv[]){
  */
 
 void inline MATRIX1 (struct timespec *ts, struct timespec *te){
-	#define X_SIZE	60
-	#define Y_SIZE	30
-
 	int x, y;
 
 	/* ### starts measuring ### */
@@ -94,9 +100,6 @@ void inline MATRIX1 (struct timespec *ts, struct timespec *te){
  * MATRIX 2
  */
 void inline MATRIX2 (struct timespec *ts, struct timespec *te){
-	#define X_SIZE	60
-	#define Y_SIZE	30
-
 	register int x,y;
 
 	/* ### starts measuring ### */
@@ -117,9 +120,6 @@ void inline MATRIX2 (struct timespec *ts, struct timespec *te){
  * MATRIX 3
  */
 void inline MATRIX3 (struct timespec *ts, struct timespec *te){
-	#define X_SIZE	60
-	#define Y_SIZE	30
-
 	register int x,y;
 
 	/* ### starts measuring ### */
@@ -140,17 +140,14 @@ void inline MATRIX3 (struct timespec *ts, struct timespec *te){
  * MATRIX 4
  */
 void inline MATRIX4 (struct timespec *ts, struct timespec *te){
-	#define X_SIZE	60
-	#define Y_SIZE	32
-
 	register int x,y;
 
 	/* ### starts measuring ### */
 	rdtscb_getticks ( ts );
 
-	for (y = 0; y < Y_SIZE; ++y){
+	for (y = 0; y < Y_ALIGNED; ++y){
 		for (x = 0; x < X_SIZE; ++x){
-			matrix[x][y] = -1;
+			matrix_a[x][y] = -1;
 		}
 	}
 
@@ -163,9 +160,6 @@ void inline MATRIX4 (struct timespec *ts, struct timespec *te){
  * MATRIX 5
  */
 void inline MATRIX5 (struct timespec *ts, struct timespec *te){
-	#define X_SIZE	60
-	#define Y_SIZE	30
-
 	register int index;
 	register int *matrix_ptr;
 
@@ -188,9 +182,6 @@ void inline MATRIX5 (struct timespec *ts, struct timespec *te){
  * MATRIX 6
  */
 void inline MATRIX6 (struct timespec *ts, struct timespec *te){
-	#define X_SIZE	60
-	#define Y_SIZE	30
-
 	register int *matrix_ptr;
 
 	/* ### starts measuring ### */
@@ -215,9 +206,6 @@ void initmatrix(){
 }
 
 void inline MATRIX7 (struct timespec *ts, struct timespec *te){
-	#define X_SIZE	60
-	#define Y_SIZE	30
-
 	register int *matrix_ptr;
 
 	/* ### starts measuring ### */
@@ -237,9 +225,6 @@ void inline MATRIX7 (struct timespec *ts, struct timespec *te){
 	memset (matrix, -1, sizeof(matrix));
 
 void inline MATRIX8 (struct timespec *ts, struct timespec *te){
-	#define X_SIZE	60
-	#define Y_SIZE	30
-
 	register int *matrix_ptr;
 
 	/* ### starts measuring ### */

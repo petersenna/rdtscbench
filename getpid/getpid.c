@@ -21,7 +21,7 @@
 /* 
  * Sample function that shows how to use rdtscbench to measure operations
  */
-void inline GETPID	( struct timespec *ts, struct timespec *te );
+void GETPID	( struct timespec *ts, struct timespec *te );
 
 int main (int argc, char *argv[]){
 	struct timespec begin, end;

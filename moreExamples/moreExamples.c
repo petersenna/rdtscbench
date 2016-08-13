@@ -21,15 +21,16 @@
 #include <unistd.h>
 #include <string.h>
 #include <unistd.h>
-
+#include <sys/types.h>
+#include <sys/wait.h>
 
 /* Functions used to benchmark some code */
-void inline GETTIMEOFDAY( struct timespec *ts, struct timespec *te );
-void inline SYSCONF	( struct timespec *ts, struct timespec *te );
-void inline SIMPLEMATH	( struct timespec *ts, struct timespec *te );
-void inline MMEM	( struct timespec *ts, struct timespec *te );
-void inline GMEM	( struct timespec *ts, struct timespec *te );
-void inline PIPES	( struct timespec *ts, struct timespec *te );
+void GETTIMEOFDAY( struct timespec *ts, struct timespec *te );
+void SYSCONF	( struct timespec *ts, struct timespec *te );
+void SIMPLEMATH	( struct timespec *ts, struct timespec *te );
+void MMEM	( struct timespec *ts, struct timespec *te );
+void GMEM	( struct timespec *ts, struct timespec *te );
+void PIPES	( struct timespec *ts, struct timespec *te );
 
 int main (int argc, char *argv[]){
 	struct timespec begin, end;
