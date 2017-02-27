@@ -1,11 +1,12 @@
-CFLAGS = -lrt -lm 
+CFLAGS = -lrt -lm
+LDFLAGS = -lm 
 
 all: gethz rdtscbench.o
 
 gethz:
 	./gethz.sh
 
-rdtscbench.o: rdtscbench.h rdtscbench.c
+rdtscbench.o: rdtscbench.h rdtscbench.c $(LDFLAGS)
 
 clean:
 	rm -f *~
